@@ -47,8 +47,8 @@ This Streamlit app leverages Retrieval-Augmented Generation (RAG) and OpenAI's G
 
 ```bash
 # Clone repo
-git clone https://github.com/your-username/vo2max-rag-assistant.git
-cd vo2max-rag-assistant
+git clone https://github.com/Swarajrai13/QAC387-Assignment-4.git
+cd QAC387-Assignment-4
 
 # Create & activate virtual env
 python -m venv venv
@@ -75,7 +75,7 @@ OPENAI_API_KEY=sk-<your-key-here>
 
 2. **Launch Streamlit**:
    ```bash
-   streamlit run rag_data_assistant.py
+   streamlit run rag_data_assistant_4_23.py
    ```
 
 3. Upload your VO₂ CSV, ask a question, and review the insights.
