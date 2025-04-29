@@ -1,0 +1,18 @@
+Timestamp,Participant ID,International Fitness Scale (IFIS)  [Your general physical fitness is:],"International Fitness Scale (IFIS)  [Your cardiorespiratory fitness (capacity to do exercise, for instance running, for a long time) is:]",International Fitness Scale (IFIS)  [Your muscular strength is:],International Fitness Scale (IFIS)  [Your speed / agility is:],International Fitness Scale (IFIS)  [Your flexibility is:],Physical activity readiness (PAR-Q) [Has your doctor ever said that you have a heart condition and that you should only perform physical activity recommended by a doctor?],Physical activity readiness (PAR-Q) [Do you feel pain in your chest when you perform physical activity?],"Physical activity readiness (PAR-Q) [In the past month, have you had chest pain when you were not performing any physical activity?]","Physical activity readiness (PAR-Q) [Do you lose your balance because of dizziness, or do you ever lose consciousness?]",Physical activity readiness (PAR-Q) [Do you have a bone or joint problem that could be made worse by a change in physical activity?],Physical activity readiness (PAR-Q) [Is your doctor currently prescribing any medication for your blood pressure or for a heart condition?],Physical activity readiness (PAR-Q) [Do you know of any other reason why you should not engage in physical activity?]
+11/25/2021 15:06:24,P01,Poor,Poor,Average,Poor,Poor,No,No,No,No,No,No,No
+11/25/2021 15:23:23,P02,Good,Good,Good,Good,Average,No,No,No,No,No,No,No
+11/26/2021 18:39:56,P04,Average,Average,Average,Average,Good,No,No,No,No,No,No,No
+11/29/2021 10:19:20,P05,Average,Average,Average,Average,Average,No,No,No,No,No,No,No
+11/29/2021 10:51:35,P06,Average,Average,Average,Average,Good,Yes,Yes,Yes,Yes,Yes,Yes,Yes
+11/29/2021 12:51:51,P03,Good,Good,Average,Average,Very good,No,No,No,No,No,No,No
+11/29/2021 13:06:57,P07,Good,Good,Good,Average,Good,No,No,No,No,No,No,No
+11/29/2021 18:41:32,P09,Average,Poor,Poor,Average,Average,No,No,No,No,No,No,No
+11/29/2021 21:19:42,P08,Average,Average,Good,Average,Poor,No,No,No,No,No,No,No
+11/30/2021 14:31:26,P10,Average,Average,Average,Average,Poor,No,No,No,No,No,No,No
+11/30/2021 17:13:35,P12,Very good,Very good,Very good,Very good,Very good,No,No,No,No,No,No,No
+12/1/2021 15:27:13,P15,Average,Good,Average,Average,Average,No,No,No,No,No,No,No
+12/1/2021 15:36:37,P14,Average,Average,Good,Good,Average,No,No,No,No,No,No,No
+12/1/2021 16:00:03,P11,Poor,Poor,Poor,Poor,Average,No,No,No,Yes,No,No,No
+12/2/2021 11:21:39,P16,Very good,Very good,Very good,Very good,Very good,No,No,No,No,No,No,No
+12/2/2021 13:56:33,P13,Good,Good,Average,Average,Average,No,No,No,No,No,No,No
+12/2/2021 17:32:02,P17,Good,Average,Poor,Average,Average,No,No,No,No,No,No,No
