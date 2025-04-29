@@ -36,7 +36,7 @@ This Streamlit app leverages Retrieval-Augmented Generation (RAG) and OpenAI's G
 ├── vo2_processing_standards.txt    # Expert guidance for RAG
 ├── RAG_pipeline.py                # Build FAISS vector store
 <<<<<<< HEAD
-├── rag_data_assistant_4_29.py          # Main Streamlit app
+├── rag_data_assistant_4_29_v2.py          # Main Streamlit app
 =======
 ├── validation_log.csv              # Testing & Validation Checklist + Detailed Validation Log
 ├── app_logs.txt                   # Runtime error & usage logs
