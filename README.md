@@ -35,9 +35,8 @@ This Streamlit app leverages Retrieval-Augmented Generation (RAG) and OpenAI's G
 ├── README.md
 ├── vo2_processing_standards.txt    # Expert guidance for RAG
 ├── RAG_pipeline.py                # Build FAISS vector store
-├── rag_data_assistant.py          # Main Streamlit app
-├── checklist.md                   # Testing & Validation Checklist
-├── validation_log.md              # Detailed Validation Log
+├── rag_data_assistant_4_29.py          # Main Streamlit app
+├── validation_log.csv              # Testing & Validation Checklist + Detailed Validation Log
 ├── app_logs.txt                   # Runtime error & usage logs
 └── vectorstore/                   # FAISS index files
 ```
@@ -48,8 +47,8 @@ This Streamlit app leverages Retrieval-Augmented Generation (RAG) and OpenAI's G
 
 ```bash
 # Clone repo
-git clone https://github.com/your-username/vo2max-rag-assistant.git
-cd vo2max-rag-assistant
+git clone https://github.com/Swarajrai13/QAC387-Assignment-4.git
+cd QAC387-Assignment-4
 
 # Create & activate virtual env
 python -m venv venv
@@ -76,7 +75,7 @@ OPENAI_API_KEY=sk-<your-key-here>
 
 2. **Launch Streamlit**:
    ```bash
-   streamlit run rag_data_assistant.py
+   streamlit run rag_data_assistant_4_23.py
    ```
 
 3. Upload your VO₂ CSV, ask a question, and review the insights.
