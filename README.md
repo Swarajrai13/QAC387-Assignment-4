@@ -77,7 +77,7 @@ OPENAI_API_KEY=sk-<your-key-here>
 
 2. **Launch Streamlit**:
    ```bash
-   streamlit run rag_data_assistant_4_23.py
+   streamlit run rag_data_assistant_4_29_v2.py
    ```
 
 3. Upload your VO₂ CSV, ask a question, and review the insights.
