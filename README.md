@@ -1,42 +1,103 @@
-# VO2 Optimization Assistant 🏃
+# VO₂max Data Assistant with Expert RAG Integration
 
-This is a Streamlit web app that allows users to upload VO2 test data and receive an optimized fitness-recovery score and summary. The app combines data parsing, statistical analysis, and an LLM-powered question-answering assistant built using LangChain and OpenAI.
+This Streamlit app leverages Retrieval-Augmented Generation (RAG) and OpenAI's GPT-4 to provide deep, context-aware analysis of your VO₂max datasets. It integrates **expert domain guidance** (from PMC10687136 Table 4) to ensure rigorous evaluation of data processing strategies and physiological insights.
 
-## 🔧 Features
+---
 
-- Upload your VO2 `.csv` test report
-- Enter your participant ID to match survey data (stress, fitness, diet)
-- Get a personalized Optimization Score based on training + recovery metrics
-- Ask any question about your VO2 data using a built-in AI assistant
+## 🚀 New Features & Improvements (April 2025)
 
-## ⚙️ How to Run
+1. **RAG Pipeline Integration**  
+   - Expert guidance document (`vo2_processing_standards.txt`) indexed via FAISS
+   - Contextual retrieval ensures LLM answers refer to VO₂max reporting best practices
 
-1. Clone this repo and `cd` into it.
-2. Create a virtual environment and install dependencies:
+2. **Enhanced Data Handling & UX**  
+   - Robust error handling for malformed or empty CSV uploads  
+   - Data summary table (mean, std, min, max) replaces raw-preview for clarity  
+   - Subsampling of every 10th row & key columns (`Time[s]`, `VO2[mL/kg/min]`, `HR[bpm]`) to respect model token limits
+
+3. **Advanced Visualization**  
+   - Individual Matplotlib plots for each key metric (separate panels)  
+   - Automatic detection of required columns with user feedback if missing
+
+4. **LLM Prompt Engineering**  
+   - Deep statistical & physiological interpretation  
+   - Trend highlighting, plausibility checks, and follow-up recommendations
+
+5. **Testing & Validation**  
+   - **Validation Log** (`validation_log.csv`) covering Functional, Input Validation, Code Accuracy, Output Invariance, Usability, and Edge Cases - in addition to tracking dates, actions, and outcomes  
+   - In-app user feedback capture (1–5 star rating + comments)
+
+---
+
+## 📁 Repository Structure
+
+```
+├── README.md
+├── vo2_processing_standards.txt    # Expert guidance for RAG
+├── RAG_pipeline.py                # Build FAISS vector store
+├── rag_data_assistant.py          # Main Streamlit app
+├── checklist.md                   # Testing & Validation Checklist
+├── validation_log.md              # Detailed Validation Log
+├── app_logs.txt                   # Runtime error & usage logs
+└── vectorstore/                   # FAISS index files
+```
+
+---
+
+## 📦 Installation
+
+```bash
+# Clone repo
+git clone https://github.com/your-username/vo2max-rag-assistant.git
+cd vo2max-rag-assistant
+
+# Create & activate virtual env
+python -m venv venv
+source venv/bin/activate  # macOS/Linux
+venv\Scripts\activate     # Windows
+
+# Install dependencies
+pip install -r requirements.txt
+```  
+
+**Note:** Ensure you have a `.env` file in the project root containing:
+```env
+OPENAI_API_KEY=sk-<your-key-here>
+```
+
+---
+
+## ▶️ Running the App
+
+1. **Generate the RAG vector store** (once, or whenever `vo2_processing_standards.txt` changes):
+   ```bash
+   python RAG_pipeline.py
    ```
-   python3 -m venv venv
-   source venv/bin/activate
-   pip install -r requirements.txt
-   ```
-3. Create a `.env` file and add your OpenAI API key:
-   ```
-   OPENAI_API_KEY=sk-xxxxxxx
-   ```
-4. Place the required survey CSVs in the `/data` folder.
-5. Run the app:
-   ```
-   streamlit run app.py
+
+2. **Launch Streamlit**:
+   ```bash
+   streamlit run rag_data_assistant.py
    ```
 
-## 📁 Required Data Files (in `/data`)
-- Demographics.csv
-- Perceived Stress Scale (PSS).csv
-- International Fitness Scale (IFIS).csv
-- How healthy is your diet.csv
+3. Upload your VO₂ CSV, ask a question, and review the insights.
 
-## ⚠️ Caution
-- The LLM agent runs with `allow_dangerous_code=True` — avoid uploading sensitive data.
-- LLM answers are based on available tabular data; they are not a replacement for medical advice.
+---
 
-## ✅ Submission Ready
-Built for Assignment 3 of QAC387: LLM-powered data analysis.
+## 🧪 Testing & Validation
+
+- Review the **checklist.md** for implemented tests and pending items.  
+- Consult **validation_log.md** for the detailed timeline of improvements.  
+- User feedback collected in-app is appended to `app_logs.txt`.
+
+---
+
+## 🛠️ Next Steps
+
+- Dynamic column mapping for non-standard VO₂ files  
+- Support for categorical or multi-metric analyses  
+- Batch processing for very large datasets  
+
+---
+
+**License**: MIT  
+**Author**: Swaraj  

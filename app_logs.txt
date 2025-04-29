@@ -1,0 +1,6 @@
+2025-04-23 10:35:37,663 - INFO - Loading faiss with AVX2 support.
+2025-04-23 10:35:37,791 - INFO - Successfully loaded faiss with AVX2 support.
+2025-04-23 10:35:37,800 - INFO - Failed to load GPU Faiss: name 'GpuIndexIVFFlat' is not defined. Will not load constructor refs for GPU indexes.
+2025-04-23 10:35:40,098 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-04-23 10:35:57,974 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-23 10:35:58,012 - INFO - Analysis successful for question: Am I in good shape to run a marathon in under 4:00:00?

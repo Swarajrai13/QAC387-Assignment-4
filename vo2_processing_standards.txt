@@ -1,0 +1,10 @@
+VO₂max Data Processing Recommendations (from PMC10687136, Table 4):
+
+- Metabolic cart: State the exact device model and manufacturer.
+- Measurement mode: State the measurement mode (e.g., mixing chamber, breath-by-breath).
+- Software: State the name and version of the software used for the data analysis.
+- Preprocessing: State if and how data underwent any initial modification (e.g., filtering of outliers, interpolation).
+- Processing strategy: State the exact data processing strategy used to determine the VO₂max (e.g., binned time average).
+- Processing parameters: State the parameters used for the processing strategy (e.g., length of averaging interval).
+- Rationale: State the rationale for using the processing strategy (e.g., reference to recommendations).
+

@@ -1,0 +1,28 @@
+Testing and Validation Log,,,,,🗒️ Validation Log,,
+,,,,,Date & Time,Action,Outcome / Notes
+Category,Item,Status,Notes,,2025-04-23 9:10,Added try/except around CSV upload and st.stop() for empty/malformed files.,App now shows clear errors and never crashes on bad files.
+Functional Testing,App runs without crashing,✓,Wrapped critical blocks in try/except and used st.stop().,,2025-04-23 9:15,"Replaced raw df.head() preview with df.describe() summary (mean, std, min, max).",Summary table displays correctly as a DataFrame.
+,Dataset upload works correctly,✓,"Handles good CSV, empty CSV, and malformed files with clear errors.",,2025-04-23 9:20,"Implemented separate Matplotlib plots for each key metric (Time[s] vs each of VO₂, HR).","Each metric now has its own plot, improving readability."
+,User questions trigger appropriate analysis,✓,Analysis only begins when both question and valid df exist.,,2025-04-23 9:25,"Added subsampling of every 10th row and restricted to ['Time[s]','VO2[mL/kg/min]','HR[bpm]'].",Reduced token footprint; token estimate caption shows ~190 tokens.
+,Generated code runs and returns a result,✓,LLM code invocation is inside try/except.,,2025-04-23 9:30,Refined LLM prompt to request “deep statistical and physiological interpretation” and next-step recommend.,"Assistant now highlights trends, plausibility, and follow-up suggestions."
+,Plots and tables are displayed as expected,✓,Summary table and individual plots for each key metric.,,2025-04-23 9:40,Wrapped RAG loading and LLM calls in try/except; added warnings if key columns missing.,Analysis section fails gracefully with clear messages on missing data.
+Input Validation,App shows a clear error if a bad or empty file is uploaded,✓,"Checks df.empty and column count, displays st.error.",,2025-04-23 9:50,Integrated user feedback collection (1–5 stars + comments).,Can capture usability ratings and improvement ideas in-app.
+,App handles invalid or confusing questions gracefully,✓,"If required columns missing, warns and stops gracefully.",,2025-04-23 10:00,Manual system test with P06_DataAverage.csv (~1904 rows).,"Verified summary, plots, and LLM insight run end-to-end without errors."
+,App doesn’t crash with missing or messy data columns,✓,Verifies presence of key_cols before subsampling or analysis.,,2025-04-23 10:10,Re-ran repeated queries to check Output Invariance and prompt robustness.,Results remained consistent; small variations within expected LLM randomness.
+Code Accuracy Check,LLM-generated code runs in a separate script or notebook,✓,All code invoked via LangChain + OpenAI is within controlled blocks.,,2025-04-23 10:20,Shared app with peer for Usability Testing; gathered one suggestion (separate plots).,Implemented suggestion immediately.
+,Code uses correct columns and logic,✓,"We explicitly select ['Time[s]', 'VO2[mL/kg/min]', 'HR[bpm]'].",,2025-04-23 10:25,"Noted areas for future work: dynamic column detection, support for categorical questions, batched I/O.",Logged under “Testing Summary Report” for next iteration.
+,"Output matches expectations (e.g., correct means, valid plots)",✓,Verified summary stats and plots visually match the dataset.,,,,
+,Errors in generated code are detected and explained or caught,✓,"General except Exception as e: st.error(f""Analysis failed: {e}"").",,,,
+Output Invariance,Asking the same question twice returns consistent results,✓,Manually tested with identical prompts—results remained stable.,,,,
+,Small changes in question wording don’t change answers dramatically,✓,Rephrased prompts (“Is it processed correctly?” vs “Assess my VO₂ data”)—answers consistent in structure.,,,,
+,"If results vary, explain why you think your app might not be working reliably",✓,Prompt explicitly asks the assistant to note missing/incomplete data.,,,,
+Usability Testing,A classmate or friend was able to use the app,✓,"Shared with peer; they could upload a CSV, view stats, and get an analysis.",,,,
+,You noted confusing steps or unclear messages,✓,"Added clear instructions, st.info messages, and feedback form to capture usability issues.",,,,
+,You collected at least one suggestion for improvement,✓,Peer suggested separate plots (implemented).,,,,
+,Optional: You asked for a quick usability rating,✓,Added 1–5 star radio and feedback text area.,,,,
+Scenario / Edge Case,You tested your app on at least 1 different dataset,✓,Used both P06_DataAverage.csv and a small synthetic VO₂ file.,,,,
+,You tried a mix of numeric and categorical questions,–,(App is VO₂-focused—no categorical variables. Future: allow non-VO₂ data.),,,,
+,App still worked with datasets with missing or oddly named columns,✓,Handled missing key_cols with warning; did not crash.,,,,
+Testing Summary Report,You created a short summary of what you tested,✓,See “Validation Log” below.,,,,
+,You noted what worked well and what still needs work,✓,Noted above in checklist “Notes” column.,,,,
+,You listed at least one improvement you would make with more time,✓,"Add support for additional metrics, dynamic column detection, batching for very large files.",,,,
