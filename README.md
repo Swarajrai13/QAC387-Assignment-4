@@ -4,7 +4,7 @@ This Streamlit app leverages Retrieval-Augmented Generation (RAG) and OpenAI's G
 
 ---
 
-## 🚀 New Features & Improvements (April 2025)
+## 🚀 New Features & Improvements (May 2025)
 
 1. **RAG Pipeline Integration**  
    - Expert guidance document (`vo2_processing_standards.txt`) indexed via FAISS
